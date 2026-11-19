@@ -15,7 +15,9 @@ tools:
   edit: true
   web-fetch: {}
 safe-outputs:
-  create-pull-request: {}
+  create-pull-request:
+    allowed-files:
+      - "site/content/github-info.md"
 network:
   allowed:
     - github
@@ -83,19 +85,3 @@ If updates are needed:
 If no meaningful updates are needed:
 - Output: "No significant updates needed at this time"
 - Take no action (noop)
-
-tools:
-  web-fetch:
-    # Required to read GitHub Blog and Changelog
-    enabled: true
-  edit:
-    # Required to update documentation file
-    enabled: true
-    allowed-paths:
-      - "site/content/github-info.md"
-  create-pull-request:
-    # Required to propose changes for review with safe-outputs
-    enabled: true
-    safe-outputs: true
-    allowed-files:
-      - "site/content/github-info.md"
