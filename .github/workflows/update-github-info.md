@@ -14,6 +14,8 @@ engine:
 tools:
   edit: true
   web-fetch: {}
+safe-outputs:
+  create-pull-request: {}
 network:
   allowed:
     - github
