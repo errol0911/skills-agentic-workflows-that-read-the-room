@@ -8,9 +8,12 @@ on:
 permissions:
   contents: read
   pull-requests: read
-engine: copilot-sdk
+engine:
+  id: copilot
+  copilot-sdk: true
 tools:
   edit: true
+  web-fetch: {}
 network:
   allowed:
     - github
